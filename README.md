@@ -26,6 +26,7 @@ All routes that include the levels : 1-3-5-7 ( A-C-E-F )
 Elevator C routes: 
 All routes that include the levels : 1-2-3-4-5-6-7 ( A-B-C-D-E-F-G )
 
+Further Explanation ( in Greek )
 ![image](https://user-images.githubusercontent.com/118728873/218336072-62f20b6d-cbd6-4b1b-87ae-95dff7ef3544.png)
 ![image](https://user-images.githubusercontent.com/118728873/218336078-0d2ba390-25b6-4fcb-b4a8-23390d13dd9a.png)
 
