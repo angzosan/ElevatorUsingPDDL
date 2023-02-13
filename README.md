@@ -42,8 +42,8 @@ Add list(statements we make 'true') : (is_at ?x ?from) -
 name : move
 variables : from, to, x, transfer
 prerequisetes : (level ?from) (level ?to) (elevator ?x) (transfer ?transfer) 
- (at ?transfer ?from) -να βρισκόμαστε στον όροφο από τον οποίο θέλουμε να ξεκινήσουμε
- (can_go ?x ?from ?to) -να μπορεί το ασανσέρ x να πάει στον όροφο που θέλουμε να πάμε
+ (at ?transfer ?from) -> already being in the level we want to start from
+ (can_go ?x ?from ?to) -> the elevator being able to visit this level
  (is_at ?x ?from)
 Add list(statements we make 'true') :  (at ?transfer ?to) 
 Remove list(statements we make 'false') : (not (at ?transfer ?from)) 
