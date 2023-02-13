@@ -26,7 +26,25 @@ All routes that include the levels : 1-3-5-7 ( A-C-E-F )
 Elevator C routes: 
 All routes that include the levels : 1-2-3-4-5-6-7 ( A-B-C-D-E-F-G )
 
-Further Explanation ( in Greek )
-![image](https://user-images.githubusercontent.com/118728873/218336072-62f20b6d-cbd6-4b1b-87ae-95dff7ef3544.png)
-![image](https://user-images.githubusercontent.com/118728873/218336078-0d2ba390-25b6-4fcb-b4a8-23390d13dd9a.png)
+
+Entities : (level ?y), (elevator ?x), (transfer ?t)
+Relations : (is_at ?x ?y), (at ?t ?y), (can_go ?x ?y ?y) -> elevator x can go from level y to level y - different y's-
+
+Transition Operands 
+name : call
+variables : from, to, x, transfer
+prerequisetes : (level ?from) (level ?to) (elevator ?x) (transfer ?transfer) 
+ (at ?transfer ?from) -> already being in the level we want to start from
+ (can_go ?x ?from ?to) -> the elevator being able to visit this level
+ (not(is_at ?x ?from) )
+Add list(statements we make 'true') : (is_at ?x ?from) -
+
+name : move
+variables : from, to, x, transfer
+prerequisetes : (level ?from) (level ?to) (elevator ?x) (transfer ?transfer) 
+ (at ?transfer ?from) -να βρισκόμαστε στον όροφο από τον οποίο θέλουμε να ξεκινήσουμε
+ (can_go ?x ?from ?to) -να μπορεί το ασανσέρ x να πάει στον όροφο που θέλουμε να πάμε
+ (is_at ?x ?from)
+Add list(statements we make 'true') :  (at ?transfer ?to) 
+Remove list(statements we make 'false') : (not (at ?transfer ?from)) 
 
